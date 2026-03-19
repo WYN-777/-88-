@@ -1,1 +1,1 @@
-# -88-Liuyunchun:qmid 231224620/ github Xuan20-cmd (teammate)
+# Liyuchun github:Xuan20-cmd/QMID:231224620/Group Member
