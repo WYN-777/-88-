@@ -1,0 +1,7 @@
+
+Wangyuning: GitHub WYN-777 / QMID 231224505 / Group Leader  
+FU0719: QMID 231224538 / Group Member  
+Liyuchun: GitHub Xuan20-cmd / QMID 231224620 / Group Member  
+WangChenyu: GitHub Mynameisxiaoy / QMID 231224893 / Group Member  
+XuJiale: GitHub xujiale13 / QMID 231224619 / Group Member  
+Yuxiaohan: GitHub melania0130 / QMID 231224147 / Group Member
