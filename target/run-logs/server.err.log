@@ -1,0 +1,17 @@
+5月 24, 2026 12:29:24 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-nio-8080"]
+5月 24, 2026 12:29:24 上午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service [Tomcat]
+5月 24, 2026 12:29:24 上午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet engine: [Apache Tomcat/9.0.89]
+5月 24, 2026 12:29:24 上午 org.apache.catalina.startup.ContextConfig getDefaultWebXmlFragment
+信息: No global web.xml found
+5月 24, 2026 12:29:25 上午 org.apache.jasper.servlet.TldScanner scanJars
+信息: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+5月 24, 2026 12:29:25 上午 org.apache.catalina.util.SessionIdGeneratorBase createSecureRandom
+警告: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [110] milliseconds.
+5月 24, 2026 12:29:25 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-nio-8080"]
+5月 24, 2026 12:37:30 上午 org.apache.tomcat.util.http.parser.Cookie logInvalidHeader
+信息: A cookie header was received [Hm_lvt_ee2c4c13bbf7dc7819d47f718a7d2e80=1772349540,1772634411,1772769043,1774377781;] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
