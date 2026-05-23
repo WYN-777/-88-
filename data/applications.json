@@ -1,0 +1,25 @@
+[ {
+  "id" : "APP-4B0A2C31",
+  "jobId" : "JOB-1001",
+  "taId" : "20260001",
+  "status" : "Pending",
+  "appliedAt" : "2026-05-23T22:11:52.600957100",
+  "reviewedAt" : null,
+  "reviewNote" : null
+}, {
+  "id" : "APP-7B595BF0",
+  "jobId" : "JOB-1002",
+  "taId" : "20260001",
+  "status" : "Pending",
+  "appliedAt" : "2026-05-23T22:51:34.804601600",
+  "reviewedAt" : null,
+  "reviewNote" : null
+}, {
+  "id" : "APP-C6196789",
+  "jobId" : "JOB-1779553944775",
+  "taId" : "20260001",
+  "status" : "Accepted",
+  "appliedAt" : "2026-05-24T01:10:43.348511700",
+  "reviewedAt" : "2026-05-24T01:20:53.992073700",
+  "reviewNote" : "Reviewed from AI Matching"
+} ]
