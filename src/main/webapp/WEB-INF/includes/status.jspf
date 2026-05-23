@@ -1,0 +1,11 @@
+<%!
+    String statusClass(String status) {
+        if ("Accepted".equals(status) || "Open".equals(status) || "Active".equals(status)) {
+            return "badge good";
+        }
+        if ("Rejected".equals(status) || "Closed".equals(status)) {
+            return "badge danger";
+        }
+        return "badge warn";
+    }
+%>
