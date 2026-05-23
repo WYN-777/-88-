@@ -1,0 +1,68 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="com.kxw.ta.model.User" %>
+<%@ page import="com.kxw.ta.util.HtmlUtil" %>
+<%@ page import="com.kxw.ta.web.BaseServlet" %>
+<%!
+    String h(Object value) {
+        return HtmlUtil.escape(value);
+    }
+%>
+<%
+    User signedInUser = (User) session.getAttribute("user");
+    String pageTitle = request.getAttribute("pageTitle") == null
+            ? "TA Recruitment Portal"
+            : String.valueOf(request.getAttribute("pageTitle"));
+    String csrfToken = BaseServlet.ensureCsrfToken(request);
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= h(pageTitle) %></title>
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/assets/styles.css">
+</head>
+<body>
+<header class="app-header">
+    <a class="brand" href="<%= request.getContextPath() %>/dashboard">
+        <span class="brand-mark">TR</span>
+        <span>
+            <strong>TA Recruitment Portal</strong>
+            <small>BUPT International School</small>
+        </span>
+    </a>
+    <% if (signedInUser != null) { %>
+        <nav class="nav">
+            <% if (User.ROLE_TA.equals(signedInUser.getRole())) { %>
+                <a href="<%= request.getContextPath() %>/dashboard">Dashboard</a>
+                <a href="<%= request.getContextPath() %>/ta/jobs">Jobs</a>
+                <a href="<%= request.getContextPath() %>/ta/matching">AI Matching</a>
+                <a href="<%= request.getContextPath() %>/ta/applications">Applications</a>
+                <a href="<%= request.getContextPath() %>/ta/profile">Profile</a>
+            <% } else if (User.ROLE_MO.equals(signedInUser.getRole())) { %>
+                <a href="<%= request.getContextPath() %>/dashboard">Dashboard</a>
+                <a href="<%= request.getContextPath() %>/mo/jobs">Jobs</a>
+                <a href="<%= request.getContextPath() %>/mo/applications">Applicants</a>
+                <a href="<%= request.getContextPath() %>/mo/matching">AI Matching</a>
+                <a href="<%= request.getContextPath() %>/mo/profile">Profile</a>
+            <% } else if (User.ROLE_ADMIN.equals(signedInUser.getRole())) { %>
+                <a href="<%= request.getContextPath() %>/dashboard">Dashboard</a>
+                <a href="<%= request.getContextPath() %>/admin/overview">Overview</a>
+            <% } %>
+        </nav>
+        <div class="user-chip">
+            <span><%= h(signedInUser.getName()) %></span>
+            <form action="<%= request.getContextPath() %>/auth/logout" method="post">
+                <input type="hidden" name="csrfToken" value="<%= h(csrfToken) %>">
+                <button class="link-button" type="submit">Sign out</button>
+            </form>
+        </div>
+    <% } %>
+</header>
+<main class="page-shell">
+<% if (request.getAttribute("flash") != null) { %>
+    <div class="notice success"><%= h(request.getAttribute("flash")) %></div>
+<% } %>
+<% if (request.getAttribute("error") != null) { %>
+    <div class="notice error"><%= h(request.getAttribute("error")) %></div>
+<% } %>
